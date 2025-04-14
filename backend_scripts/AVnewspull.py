@@ -61,7 +61,7 @@ def update_articles(data):
 # Function to get the time period for filtering news articles
 def time_format():
     # to get the time which is 24 hours before the current time
-    time_24hrs_ago = (dt.datetime.now(dt.UTC) - dt.timedelta(hours=24)).strftime("%Y%m%dT%H%M")
+    time_24hrs_ago = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=24)).strftime("%Y%m%dT%H%M")
 
     return time_24hrs_ago
 

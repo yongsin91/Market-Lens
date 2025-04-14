@@ -51,7 +51,7 @@ def update_articles(data):
 #to get the time period for news filtering 
 def time_format():
     # to get the time which is 24hours before current time
-    time_10min_ago = (dt.datetime.now(dt.UTC) - dt.timedelta(hours=24)).isoformat() + "Z"
+    time_10min_ago = (dt.datetime.now(dt.timezone.utc) - dt.timedelta(hours=24)).isoformat() + "Z"
 
     # Parse the timestamp, ignoring microseconds and timezone
     dt_obj = dt.datetime.strptime(time_10min_ago[:19], "%Y-%m-%dT%H:%M:%S")
