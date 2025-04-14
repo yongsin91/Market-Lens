@@ -87,7 +87,15 @@ def main(ticker):
 
 #main body
 if __name__ == "__main__":
-    main(ticker)
 
+    # for testing purpose
+    # manual trigger of the individual script
+    # to check if successful:
+    # 1. Go to MySQL database 'articles' 
+    # 2. Search for source = 'yahoo finance', check if latest news is 1 day before current date
+    ticker = 'AAPL'
+    DATABASE_URL = os.getenv('DATABASE_URL')
+    print(DATABASE_URL)
+    main(ticker)
 
 

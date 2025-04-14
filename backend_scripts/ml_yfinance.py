@@ -93,12 +93,14 @@ def main(ticker):
 #main body
 if __name__ == "__main__":
 
+    # for testing purpose
+    # manual trigger of the individual script
+    # to check if successful :
+    # 1. go to MySQL database 'stocks' 
+    # 2. check if ticker 'AAPL' latest timestamp is current timestamp in 10 mins interval
+    ticker = 'AAPL'
+    DATABASE_URL = os.getenv('DATABASE_URL')
+    print(DATABASE_URL)
     main(ticker)
-
-
-# ticker = 'AAPL'
-# DATABASE_URL = os.getenv('DATABASE_URL')
-# print(DATABASE_URL)
-# main(ticker)
 
 

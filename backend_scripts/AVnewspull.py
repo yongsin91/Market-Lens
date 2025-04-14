@@ -132,6 +132,13 @@ def main(ticker):
 
 # Main script execution
 if __name__ == "__main__":
-    # The 'ticker' symbol of the stock to fetch news for (e.g., "AAPL" for Apple)
-    #ticker = "NVDA"  # You can change this to any stock symbol you want
+
+    # for testing purpose
+    # manual trigger of the individual script
+    # to check if successful:
+    # 1. Go to MySQL database 'articles' 
+    # 2. Search for source = 'Alpha Vantage', check if latest news is 1 day before current date
+    ticker = 'AAPL'
+    DATABASE_URL = os.getenv('DATABASE_URL')
+    print(DATABASE_URL)
     main(ticker)
